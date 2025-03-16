@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script>
+        class Alien {
+            constructor(name, phrase) {
+                this.name = name;
+                this.species = "alien";
+                this.phrase = phrase;
+            }
+
+            fly() {
+                console.log("Zzzzzziiiiiinnnnnggggg!!");
+            }
+
+            sayPhrase() {
+                console.log(this.phrase);
+            }
+        }
+
+        let alien;
+
+        function createAlien() {
+            alien = new Alien("Zorg", "I can't fly now");
+            alien.fly(); 
+        }
+
+        function fly() {
+            if (alien) {
+                alien.sayPhrase(); 
+            } else {
+                console.log("Сначала создайте пришельца!");
+            }
+        }
+    </script>
+</head>
+<body>
+    <button onclick="createAlien()">Создать пришельца</button>
+    <button onclick="fly()">Отправить пришельца домой</button>
+</body>
+</html>

@@ -1,0 +1,31 @@
+﻿<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Геттеры сеттеры</title>
+    <script>
+    class Person {
+        constructor(name) {
+            this._name = name;
+        }
+    
+        get name() {
+            return this._name;
+        }
+    
+        set name(newName) {
+            this._name = newName;
+        }
+    }
+    
+    const person = new Person('Иван');
+    console.log(person.name); // Иван
+    person.name = 'Петр';
+    console.log(person.name); // Петр
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
