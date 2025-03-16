@@ -1,0 +1,27 @@
+﻿<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>19-20</title>
+</head>
+<body>
+    <form id="myForm" onsubmit="return submitForm(event)" novalidate>
+        <div>
+            <label for="nameInput">Как вас зовут?</label><br>
+            <input type="text" id="nameInput" required><br>
+        </div>
+        <div>
+            <label for="emailInput">Email адрес</label><br>
+            <input type="email" id="emailInput" required><br>
+        </div>
+        <div>
+            <label for="phoneInput">Номер телефона</label><br>
+            <input type="tel" id="phoneInput" required pattern="[0-9]{13}"><br>
+        </div>
+        <input type="submit" value="Отправить">
+    </form>
+
+    <script src="app.js"></script>
+</body>
+</html>
