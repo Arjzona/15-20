@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Удаление обработчика событий</title>
+    <script>
+        function handler() {
+            alert('Спасибо!');
+        }
+
+        window.onload = function() {
+            const input = document.getElementById("button1");
+            const removeButton = document.getElementById("button2");
+
+            // Добавляем обработчик
+            input.addEventListener("click", handler);
+
+            // Кнопка для удаления обработчика
+            removeButton.addEventListener("click", function() {
+                input.removeEventListener("click", handler);
+                alert('Обработчик удалён!');
+            });
+        };
+    </script>
+</head>
+<body>
+
+    <input id="button1" type="button" value="Нажми меня"/>
+    <input id="button2" type="button" value="Удалить обработчик"/>
+
+</body>
+</html>

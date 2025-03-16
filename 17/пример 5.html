@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Обработчики событий</title>
+    <script>
+        function handler1() {
+            alert('Спасибо!');
+        }
+        
+        function handler2() {
+            alert('Спасибо ещё раз!');
+        }
+
+        window.onload = function() {
+            const elem = document.getElementById("elem");
+            elem.addEventListener("click", handler1); // Выводит "Спасибо!"
+            elem.addEventListener("click", handler2); // Выводит "Спасибо ещё раз!"
+        };
+    </script>
+</head>
+<body>
+
+    <input id="elem" type="button" value="Нажми меня"/>
+
+</body>
+</html>
